@@ -34,28 +34,6 @@ function bravo () {
         . . . . .
         `)
 }
-function la_lamada_de_feliz () {
-    feliz()
-    if (true) {
-        basic.showString("si le das agua estara feliz al menos que  tenga agua porque asi no se pone mal acontubrada ")
-        basic.showLeds(`
-            . . . . .
-            . # . # .
-            # . . . #
-            . # # # .
-            . . . . .
-            `)
-    } else {
-        basic.showString(" si no ledas agua ella  despues de una semana se pone brava ")
-        basic.showLeds(`
-            # . . . #
-            . # . # .
-            . . # . .
-            . # # # .
-            # . # . #
-            `)
-    }
-}
 let sol = 0
 let dale_agua = 0
 let palabras = 0
@@ -71,10 +49,12 @@ basic.forever(function () {
     if (dale_agua) {
         if (sol) {
             if (palabras) {
+                basic.pause(5000)
                 feliz()
             }
         }
     } else {
+        basic.pause(5000)
         bravo()
     }
 })
@@ -83,19 +63,23 @@ basic.forever(function () {
     if (no_darle_agua) {
         if (no_hablar) {
             if (hablar_feo) {
+                basic.pause(5000)
                 bravo()
             }
         }
     } else {
+        basic.pause(5000)
         feliz()
     }
 })
 basic.forever(function () {
     if (palabras) {
         if (escucha_musica) {
+            basic.pause(5000)
             no_escucho()
         }
     } else {
+        basic.pause(5000)
         feliz()
     }
 })
@@ -103,10 +87,12 @@ basic.forever(function () {
     if (_new) {
         if (como_se_nutre_el) {
             if (cosas_increible) {
+                basic.pause(5000)
                 sin_palabras()
             }
         }
     } else {
+        basic.pause(5000)
         feliz()
     }
 })
